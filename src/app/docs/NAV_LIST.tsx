@@ -1,6 +1,9 @@
 import {
   FaBookOpen,
   FaFaceAngry,
+  FaFaceGrimace,
+  FaFaceGrinHearts,
+  FaFaceGrinSquint,
   FaFaceSadTear,
   FaFaceSmileBeam,
   FaList,
@@ -16,6 +19,13 @@ const NAV_LIST = {
     { title: "joy", to: "list/joy", icon: <FaFaceSmileBeam /> },
     { title: "anger", to: "list/anger", icon: <FaFaceAngry /> },
     { title: "sadness", to: "list/sadness", icon: <FaFaceSadTear /> },
+    { title: "love", to: "list/love", icon: <FaFaceGrinHearts /> },
+    {
+      title: "embarrassment",
+      to: "list/embarrassment",
+      icon: <FaFaceGrinSquint />,
+    },
+    { title: "fear", to: "list/fear", icon: <FaFaceGrimace /> },
   ],
 };
 

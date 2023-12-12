@@ -1,7 +1,6 @@
 import CustomBreadCrumbs from "@/app/components/CustomBreadCrumbs";
 import { NextPage } from "next";
-import KaomojiDescription from "./sections/kaomojiDescription.section";
-import HowToContribute from "./sections/howToContribute.section";
+import { HowToContribute, KaomojiDescription } from "./sections";
 
 interface Props {}
 
@@ -16,7 +15,7 @@ const GetStarted: NextPage<Props> = ({}) => {
 
       <KaomojiDescription />
 
-      <HowToContribute/>
+      <HowToContribute />
     </div>
   );
 };

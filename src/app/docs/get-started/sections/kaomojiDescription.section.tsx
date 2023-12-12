@@ -8,6 +8,7 @@ const KaomojiDescription: FC<Props> = ({}) => {
       <h1 className="mb-6 rounded border-[2px] border-secondary px-3 py-2 text-2xl font-bold capitalize shadow-secondary">
         kaomoji (顔文字): Japanese Emoticons
       </h1>
+
       <div className="flex flex-col gap-y-4">
         {/* dont blame me with this code bruhh */}
         <p>

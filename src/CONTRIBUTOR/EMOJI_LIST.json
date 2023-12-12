@@ -1,7 +1,82 @@
-[
-  { "title": "", "emoji": "", "category": "" },
-  { "title": "", "emoji": "", "category": "" },
-  { "title": "", "emoji": "", "category": "" },
-  { "title": "", "emoji": "", "category": "" },
-  { "title": "", "emoji": "", "category": "" }
-]
+{
+  "emoji": [
+    {
+      "to": "/docs/list/joy",
+      "emoji": "(* ^ ω ^)",
+      "category": "joy",
+      "description": "If you want to create joyful, happy or laughing Japanese emoticons use high up eyes.",
+      "bgColor": "bg-yellow-500",
+      "containerClassName": "hover:border-yellow-500 hover:shadow-[0px_7px_0px_#eab308]",
+      "emoji_list": [
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" }
+      ]
+    },
+    {
+      "to": "/docs/list/anger",
+      "emoji": "(＃`Д´)",
+      "category": "anger",
+      "description": "The secret of angry or evil emoticons is in their eyes.",
+      "bgColor": "bg-red-500",
+      "containerClassName": "hover:border-red-500 hover:shadow-[0px_7px_0px_#EF4444]",
+      "emoji_list": [
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" }
+      ]
+    },
+    {
+      "to": "/docs/list/sadness",
+      "emoji": "o(〒﹏〒)o",
+      "category": "sadness",
+      "description": "Sad or crying emoticons are quite easy to create.",
+      "bgColor": "bg-blue-500",
+      "containerClassName": "hover:border-blue-500 hover:shadow-[0px_7px_0px_#3b82f6]",
+      "emoji_list": [
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" }
+      ]
+    },
+    {
+      "to": "/docs/list/love",
+      "emoji": "(ﾉ´ з `)ノ",
+      "category": "love",
+      "description": "Love and kissing Japanese emoji often use character ♡ (heart) or its combination",
+      "bgColor": "bg-pink-500",
+      "containerClassName": "hover:border-pink-500 hover:shadow-[0px_7px_0px_#ec4899]",
+      "emoji_list": [
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" }
+      ]
+    },
+    {
+      "to": "/docs/list/embarrassment",
+      "emoji": "(//ω//)",
+      "category": "embarrassment",
+      "description": "To depict embarrassment, you can use ; character (something like a drop of sweat on a face), or characters for blush (*, o).",
+      "bgColor": "bg-rose-500",
+      "containerClassName": "hover:border-pink-500 hover:shadow-[0px_7px_0px_#f43f5e]",
+      "emoji_list": [
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" }
+      ]
+    },
+    {
+      "to": "/docs/list/fear",
+      "emoji": "〜(＞＜)〜",
+      "category": "fear",
+      "description": "For scared or frightened Japanese emoji use forward and backward slashes and similar characters depicting that they hide their faces in fear.",
+      "bgColor": "bg-neutral-500",
+      "containerClassName": "hover:border-neutral-500 hover:shadow-[0px_7px_0px_#737373]",
+      "emoji_list": [
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" },
+        { "title": "", "emoji": "" }
+      ]
+    }
+  ]
+}

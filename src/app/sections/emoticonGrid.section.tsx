@@ -1,36 +1,21 @@
+import Link from "next/link";
 import React from "react";
-
-const emoticons = [
-  {
-    emoji: "(* ^ ω ^)",
-    category: "joy",
-    description:
-      "If you want to create joyful, happy or laughing Japanese emoticons use high up eyes.",
-    bgColor: "bg-yellow-500",
-    containerClassName: "-rotate-[8deg]",
-  },
-  {
-    emoji: "(＃`Д´)",
-    category: "anger",
-    description: "The secret of angry or evil emoticons is in their eyes.",
-    bgColor: "bg-red-500",
-    containerClassName: "rotate-[8deg]",
-  },
-  {
-    emoji: "o(〒﹏〒)o",
-    category: "sadness",
-    description: "Sad or crying emoticons are quite easy to create.",
-    bgColor: "bg-blue-500",
-    containerClassName: "-rotate-[8deg]",
-  },
-];
 
 interface cardProps {
   emoji: string;
   category: string;
   description: string;
   bgColor: string;
-  containerClassName: string;
+  to: string;
+  containerClassName?: string;
+  emojiWidth?: string;
+  emojiSize?: string;
+}
+interface sectionProps {
+  data: any[];
+  className?: string;
+  emojiWidth?: string;
+  emojiSize?: string;
 }
 
 const EmoticonCard: React.FC<cardProps> = ({
@@ -39,26 +24,41 @@ const EmoticonCard: React.FC<cardProps> = ({
   description,
   bgColor,
   containerClassName,
+  to,
+  emojiWidth,
+  emojiSize,
 }) => (
   <div
-    className={`${containerClassName} flex w-full overflow-hidden rounded-lg border-[2px] border-secondary shadow-[0px_7px_0px_#6c5f5b]`}
+    className={`${containerClassName} w-full cursor-pointer overflow-hidden rounded-lg border-[2px] border-secondary shadow-[0px_7px_0px_#6c5f5b]`}
   >
-    <div
-      className={`flex w-[150px] flex-shrink-0 items-center justify-center ${bgColor}`}
-    >
-      <p className="font-bold text-white">{emoji}</p>
-    </div>
-    <div className="flex flex-col p-5">
-      <h1 className="mb-3 text-xl font-bold capitalize">{category}</h1>
-      <p className="text-base">{description}</p>
-    </div>
+    <Link href={to} className="flex h-full w-full">
+      <div
+        className={`${emojiWidth} ${bgColor} flex w-[150px] flex-shrink-0 items-center justify-center`}
+      >
+        <p className={`${emojiSize} text-base font-bold text-white`}>{emoji}</p>
+      </div>
+      <div className="flex flex-col p-5">
+        <h1 className="mb-3 text-xl font-bold capitalize">{category}</h1>
+        <p className="line-clamp-3 text-base">{description}</p>
+      </div>
+    </Link>
   </div>
 );
 
-const EmoticonGrid: React.FC = () => (
-  <div className="mt-28 grid w-full grid-cols-3 px-32">
-    {emoticons.map((emoticon, index) => (
-      <EmoticonCard key={index} {...emoticon} />
+const EmoticonGrid: React.FC<sectionProps> = ({
+  className,
+  data,
+  emojiWidth = "w-[150px]",
+  emojiSize = "text-base",
+}) => (
+  <div className={`${className} grid w-full grid-cols-3`}>
+    {data.map((emoticon, index) => (
+      <EmoticonCard
+        key={index}
+        {...emoticon}
+        emojiWidth={emojiWidth}
+        emojiSize={emojiSize}
+      />
     ))}
   </div>
 );

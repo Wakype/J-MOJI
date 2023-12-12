@@ -1,14 +1,18 @@
 import { NextPage } from "next";
-import { EmoticonGrid, HomeButton, KaomjiKanji, Watermark } from "./sections";
-import OrnamentEmoji from "./sections/ornamentEmoji.section";
-import TopNav from "./components/TopNav";
+import {
+  EmoticonGrid,
+  HomeButton,
+  KaomjiKanji,
+  OrnamentEmoji,
+  Watermark,
+} from "./sections";
+import HOME_EMOTICON_LIST from "./HOME_EMOTICON_LIST";
 
 interface Props {}
 
 const Home: NextPage<Props> = ({}) => {
   return (
     <main className="relative h-screen w-screen overflow-hidden pt-40">
-      {/* <TopNav /> */}
       <section className="flex w-full flex-col items-center">
         <div className="flex w-[750px] flex-col gap-y-3">
           <h1 className="text-center text-[40px] font-extrabold">
@@ -29,7 +33,7 @@ const Home: NextPage<Props> = ({}) => {
 
         <HomeButton />
 
-        <EmoticonGrid />
+        <EmoticonGrid className="mt-28 px-32" data={HOME_EMOTICON_LIST}/>
       </section>
 
       <KaomjiKanji />
