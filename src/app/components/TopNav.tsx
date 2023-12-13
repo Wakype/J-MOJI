@@ -6,7 +6,7 @@ import React from "react";
 const NAV_LIST = [
   { title: "home", to: "/" },
   { title: "docs", to: "/docs/get-started" },
-  { title: "list", to: "/docs/list" },
+  { title: "list", to: "/docs/category-list" },
 ];
 
 const TopNav = () => {

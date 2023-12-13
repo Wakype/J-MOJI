@@ -32,7 +32,8 @@ const CustomBreadCrumbs: FC<BreadCrumbsProps> = ({ items }) => {
             <BreadcrumbLink
               href={item.to}
               color={index === items.length - 1 ? "primary" : "secondary"}
-              _hover={{ textDecoration: "none" }}
+              textTransform={"capitalize"}
+              // _hover={{ textDecoration: "none" }}
             >
               {item.title}
             </BreadcrumbLink>

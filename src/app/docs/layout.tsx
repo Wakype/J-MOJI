@@ -30,7 +30,7 @@ const Layout: NextPage<Props> = ({ children }) => {
                 >
                   <div
                     className={`${
-                      nav.to === path
+                      nav.to.split("/").pop() === path
                         ? "border-primary text-primary shadow-primary"
                         : " border-secondary text-secondary shadow-secondary"
                     } flex-shrink-0 rounded border-[2px] p-[10px]`}
@@ -39,7 +39,9 @@ const Layout: NextPage<Props> = ({ children }) => {
                   </div>
                   <p
                     className={`${
-                      nav.to === path ? "text-primary" : "text-secondary"
+                      nav.to.split("/").pop() === path
+                        ? "text-primary"
+                        : "text-secondary"
                     } font-medium capitalize`}
                   >
                     {nav.title}
@@ -51,7 +53,7 @@ const Layout: NextPage<Props> = ({ children }) => {
         </div>
         <div className="flex w-full flex-col gap-y-4">
           <div>
-            <h1 className="text-lg font-bold capitalize">emoji list</h1>
+            <h1 className="text-lg font-bold capitalize">category emoji</h1>
           </div>
 
           <div className="ml-5 flex flex-col gap-y-4">
@@ -64,7 +66,7 @@ const Layout: NextPage<Props> = ({ children }) => {
                 >
                   <div
                     className={`${
-                      nav.to === path
+                      nav.to.split("/").pop() === path
                         ? "border-primary text-primary shadow-primary"
                         : " border-secondary text-secondary shadow-secondary"
                     } flex-shrink-0 rounded border-[2px] p-[10px]`}
@@ -73,7 +75,9 @@ const Layout: NextPage<Props> = ({ children }) => {
                   </div>
                   <p
                     className={`${
-                      nav.to === path ? "text-primary" : "text-secondary"
+                      nav.to.split("/").pop() === path
+                        ? "text-primary"
+                        : "text-secondary"
                     } font-medium capitalize`}
                   >
                     {nav.title}

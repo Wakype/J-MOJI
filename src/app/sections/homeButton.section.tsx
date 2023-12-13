@@ -43,7 +43,7 @@ const BUTTON_DATA = [
     color: "secondary",
   },
   {
-    to: "docs/list",
+    to: "docs/category-list",
     text: "Kaomoji List",
     bg: "primary",
     color: "white",

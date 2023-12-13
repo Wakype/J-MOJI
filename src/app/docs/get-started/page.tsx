@@ -1,6 +1,6 @@
 import CustomBreadCrumbs from "@/app/components/CustomBreadCrumbs";
 import { NextPage } from "next";
-import { HowToContribute, KaomojiDescription } from "./sections";
+import { HowToContribute, WhatIsKaomoji } from "./sections";
 
 interface Props {}
 
@@ -13,7 +13,7 @@ const GetStarted: NextPage<Props> = ({}) => {
         <CustomBreadCrumbs items={breadcrumbItems} />
       </section>
 
-      <KaomojiDescription />
+      <WhatIsKaomoji />
 
       <HowToContribute />
     </div>

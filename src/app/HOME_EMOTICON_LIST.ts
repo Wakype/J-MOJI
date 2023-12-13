@@ -1,6 +1,6 @@
 const HOME_EMOTICON_LIST = [
   {
-    to: "/docs/list/joy",
+    to: "/docs/emoji-list/joy",
     emoji: "(* ^ ω ^)",
     category: "joy",
     description:
@@ -10,7 +10,7 @@ const HOME_EMOTICON_LIST = [
       "-rotate-[8deg] hover:border-yellow-500 hover:shadow-[0px_7px_0px_#eab308]",
   },
   {
-    to: "/docs/list/anger",
+    to: "/docs/emoji-list/anger",
     emoji: "(＃`Д´)",
     category: "anger",
     description: "The secret of angry or evil emoticons is in their eyes.",
@@ -19,7 +19,7 @@ const HOME_EMOTICON_LIST = [
       "rotate-[8deg] hover:border-red-500 hover:shadow-[0px_7px_0px_#EF4444]",
   },
   {
-    to: "/docs/list/sadness",
+    to: "/docs/emoji-list/sadness",
     emoji: "o(〒﹏〒)o",
     category: "sadness",
     description: "Sad or crying emoticons are quite easy to create.",
