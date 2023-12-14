@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import ReactQuery from "./reactQueryProviders";
 import TopNav from "./components/TopNav";
 import ProgressBarClient from "./components/ProgressBar";
+import ScrollToTopButton from "./components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "J-Moji: Japanese Emoji (Kaomoji)",
@@ -24,6 +25,7 @@ export default function RootLayout({
           <ProgressBarClient />
           <TopNav />
           {children}
+          <ScrollToTopButton />
         </Providers>
         {/* </ReactQuery> */}
       </body>
