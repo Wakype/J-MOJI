@@ -6,13 +6,17 @@ import {
   FaFaceGrinSquint,
   FaFaceSadTear,
   FaFaceSmileBeam,
+  FaHouse,
   FaList,
+  FaPeopleGroup,
 } from "react-icons/fa6";
 
 const NAV_LIST = {
   docs: [
+    { title: "home", to: "/", icon: <FaHouse /> },
     { title: "get started", to: "/docs/get-started", icon: <FaBookOpen /> },
     { title: "category list", to: "/docs/category-list", icon: <FaList /> },
+    { title: "contributor", to: "/docs/contributor", icon: <FaPeopleGroup /> },
   ],
 
   list: [

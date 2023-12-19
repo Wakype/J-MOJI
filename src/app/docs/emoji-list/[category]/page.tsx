@@ -40,14 +40,15 @@ const EmojiDetail: NextPage<Props> = ({ params }) => {
   ];
 
   return (
-    <div>
+    <div className="">
       <section>
         <CustomBreadCrumbs items={breadcrumbItems} />
       </section>
 
       {isLoading && (
-        <p className="uppercase font-bold tracking-wider">
-          <span className="font-sans tracking-normal">(」°ロ°)」</span> Loading...
+        <p className="font-bold uppercase tracking-wider">
+          <span className="font-sans tracking-normal">(」°ロ°)」</span>{" "}
+          Loading...
         </p>
       )}
 
@@ -57,6 +58,7 @@ const EmojiDetail: NextPage<Props> = ({ params }) => {
           <EmojiList data={categoryData} />
         </>
       )}
+
     </div>
   );
 };

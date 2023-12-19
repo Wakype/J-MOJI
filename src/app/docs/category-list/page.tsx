@@ -18,7 +18,8 @@ const CategoryList: NextPage<Props> = ({}) => {
         emojiWidth="w-[100px]"
         emojiSize="text-xs"
         titleSize="text-lg"
-        className="gap-7"
+        className="lg:gap-7 gap-5"
+        gridCols="grid-cols-1 lg:grid-cols-3"
       />
     </div>
   );

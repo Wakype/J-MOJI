@@ -23,9 +23,7 @@ const HowToContribute: FC<Props> = ({}) => {
           </h2>
           <p>
             {" "}
-            Thank you for thinking about helping with J-MOJI! Before you jump
-            in, please take a look at the guidelines here. Its super important to do a great job and contribute with
-            whats best for everyone.
+            Coming soon!
           </p>
         </div>
         <div className="flex flex-col">

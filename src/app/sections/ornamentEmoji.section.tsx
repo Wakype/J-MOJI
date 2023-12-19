@@ -80,9 +80,12 @@ const emojis: EmojiProps[] = [
 
 const OrnamentEmoji: FC<Props> = memo(({}) => {
   return (
-    <section className="absolute top-0 -z-40 flex h-full w-full justify-between">
+    <section className="absolute top-0 -z-40 hidden h-full w-full justify-between lg:flex">
       {emojis.map((emoji, index) => (
-        <div key={index} className={`${emoji.rotation} absolute ${emoji.position}`}>
+        <div
+          key={index}
+          className={`${emoji.rotation} absolute ${emoji.position}`}
+        >
           <p
             className={`${emoji.className} font-sans ${emoji.size} animate__animated animate__fadeInUp font-bold text-primary`}
           >

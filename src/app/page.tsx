@@ -3,6 +3,7 @@ import {
   EmoticonGrid,
   HomeButton,
   KaomjiKanji,
+  MobileEmoticonGrid,
   OrnamentEmoji,
   Watermark,
 } from "./sections";
@@ -12,10 +13,10 @@ interface Props {}
 
 const Home: NextPage<Props> = ({}) => {
   return (
-    <main className="relative h-screen w-screen overflow-hidden pt-40">
+    <main className="relative flex h-screen w-screen items-center overflow-hidden lg:items-baseline lg:pt-40">
       <section className="flex w-full flex-col items-center">
-        <div className="flex w-[750px] flex-col gap-y-3">
-          <h1 className="text-center text-[40px] font-extrabold">
+        <div className="flex w-full flex-col gap-y-3 px-5 lg:w-[750px] lg:px-0">
+          <h1 className="text-center text-[30px] font-extrabold lg:text-[40px]">
             Add fun{" "}
             <span className="underline-dotted capitalize text-primary underline-offset-[5px]">
               kaomoji
@@ -33,7 +34,14 @@ const Home: NextPage<Props> = ({}) => {
 
         <HomeButton />
 
-        <EmoticonGrid className="mt-28 px-32" data={HOME_EMOTICON_LIST}/>
+        <EmoticonGrid
+          className="mt-28 hidden px-32 lg:grid"
+          data={HOME_EMOTICON_LIST}
+        />
+        <MobileEmoticonGrid
+          className="mt-16 block overflow-visible lg:hidden"
+          data={HOME_EMOTICON_LIST}
+        />
       </section>
 
       <KaomjiKanji />

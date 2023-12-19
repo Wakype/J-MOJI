@@ -29,11 +29,11 @@ const EmojiItem: FC<EmojiItemProps> = ({ emoji, containerClassName }) => {
 
     if (!isCopied) {
       toast({
-        title: "Copied!",
-        description: `${emoji} - emoji copied to clipboard.`,
+        title: "Emoji Copied To Clipboard!",
+        description: `${emoji}`,
         variant: "top-accent",
         status: "success",
-        position: "bottom-right",
+        position: "bottom",
         duration: 1000,
       });
       setIsCopied(true);
@@ -52,7 +52,7 @@ const EmojiItem: FC<EmojiItemProps> = ({ emoji, containerClassName }) => {
         handleCopyToClipboard();
       }}
     >
-      <p className="font-sans font-bold">{emoji}</p>
+      <p className="font-sans font-medium lg:font-bold text-sm lg:text-base">{emoji}</p>
     </div>
   );
 };
@@ -64,7 +64,7 @@ const EmojiList: FC<EmojiListProps> = ({ data }) => {
         emoji list
       </h1>
 
-      <div className="grid grid-cols-6 gap-5">
+      <div className="grid grid-cols-2 gap-5 lg:grid-cols-6">
         {data?.emoji_list.map((emoji, i) => (
           <EmojiItem
             key={i}
