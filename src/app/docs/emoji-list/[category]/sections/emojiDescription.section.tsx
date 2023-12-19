@@ -18,9 +18,9 @@ const EmojiDescription: FC<Props> = ({ data }) => {
   return (
     <section className="mb-20">
       <div
-        className={`${data?.bgColor} mb-6 flex w-full items-center justify-between rounded border-[2px] border-secondary px-5 py-8 shadow-secondary lg:px-10`}
+        className={`${data?.bgColor} mb-6 flex w-full flex-col gap-y-3 items-center justify-between rounded border-[2px] border-secondary px-5 py-8 shadow-secondary lg:flex-row lg:px-10`}
       >
-        <h1 className="text-lg font-bold uppercase tracking-widest text-white lg:text-xl">
+        <h1 className="hidden text-lg font-bold uppercase tracking-widest text-white lg:block lg:text-xl">
           {data?.category}
         </h1>
         <h1 className="font-sans text-xl font-bold text-white lg:text-2xl">
