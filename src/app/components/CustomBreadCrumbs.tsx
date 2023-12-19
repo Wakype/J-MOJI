@@ -13,7 +13,7 @@ interface BreadCrumbsProps {
 
 const CustomBreadCrumbs: FC<BreadCrumbsProps> = ({ items }) => {
   return (
-    <div className="mb-7">
+    <div className="mb-7 border-[2px] border-secondary shadow-secondary w-fit rounded px-3 py-1">
       <Breadcrumb
         spacing="8px"
         separator={<FaChevronRight className="text-xs text-secondary" />}
@@ -32,7 +32,8 @@ const CustomBreadCrumbs: FC<BreadCrumbsProps> = ({ items }) => {
             <BreadcrumbLink
               href={item.to}
               color={index === items.length - 1 ? "primary" : "secondary"}
-              _hover={{ textDecoration: "none" }}
+              textTransform={"capitalize"}
+              // _hover={{ textDecoration: "none" }}
             >
               {item.title}
             </BreadcrumbLink>

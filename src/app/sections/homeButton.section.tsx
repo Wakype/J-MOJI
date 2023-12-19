@@ -22,8 +22,9 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         size={"lg"}
         bg={bg}
         color={color}
-        py={"25px"}
-        px={"40px"}
+        fontSize={{ base: "medium", lg: "large" }}
+        py={{ base: "25px", lg: "25px" }}
+        px={{ base: "25px", lg: "40px" }}
         border={"2px solid #6c5f5b"}
         boxShadow={"0px 7px 0px #6c5f5b"}
         _hover={hoverStyles}
@@ -43,7 +44,7 @@ const BUTTON_DATA = [
     color: "secondary",
   },
   {
-    to: "docs/list",
+    to: "docs/category-list",
     text: "Kaomoji List",
     bg: "primary",
     color: "white",
@@ -54,7 +55,7 @@ const BUTTON_DATA = [
 
 const HomeButton: FC<CustomButtonProps> = ({}) => {
   return (
-    <div className="mt-16 flex items-center gap-x-8">
+    <div className="mt-16 flex items-center gap-x-5 lg:gap-x-8">
       {BUTTON_DATA.map((button, index) => (
         <CustomButton key={index} {...button}>
           {button.text}

@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import NAV_LIST from "./NAV_LIST";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Watermark } from "../sections";
 
 interface Props {
   children: ReactNode;
@@ -14,8 +15,7 @@ const Layout: NextPage<Props> = ({ children }) => {
 
   return (
     <div className="grid grid-cols-9">
-
-      <section className="noScrollbar col-span-2 flex h-screen w-full flex-col gap-y-10 bg-[#f4f5f7] px-20 pt-32 shadow-lg shadow-[#6C5F5B]">
+      <section className="noScrollbar sticky top-0 col-span-2 hidden h-screen w-full flex-col gap-y-10 bg-[#f4f5f7] px-20 pt-32 shadow-lg shadow-[#6C5F5B] lg:flex">
         <div className="flex w-full flex-col gap-y-4">
           <div>
             <h1 className="text-lg font-bold capitalize">documentation</h1>
@@ -31,7 +31,7 @@ const Layout: NextPage<Props> = ({ children }) => {
                 >
                   <div
                     className={`${
-                      nav.to === path
+                      nav.to.split("/").pop() === path
                         ? "border-primary text-primary shadow-primary"
                         : " border-secondary text-secondary shadow-secondary"
                     } flex-shrink-0 rounded border-[2px] p-[10px]`}
@@ -40,7 +40,9 @@ const Layout: NextPage<Props> = ({ children }) => {
                   </div>
                   <p
                     className={`${
-                      nav.to === path ? "text-primary" : "text-secondary"
+                      nav.to.split("/").pop() === path
+                        ? "text-primary"
+                        : "text-secondary"
                     } font-medium capitalize`}
                   >
                     {nav.title}
@@ -52,7 +54,7 @@ const Layout: NextPage<Props> = ({ children }) => {
         </div>
         <div className="flex w-full flex-col gap-y-4">
           <div>
-            <h1 className="text-lg font-bold capitalize">emoji list</h1>
+            <h1 className="text-lg font-bold capitalize">category emoji</h1>
           </div>
 
           <div className="ml-5 flex flex-col gap-y-4">
@@ -65,7 +67,7 @@ const Layout: NextPage<Props> = ({ children }) => {
                 >
                   <div
                     className={`${
-                      nav.to === path
+                      nav.to.split("/").pop() === path
                         ? "border-primary text-primary shadow-primary"
                         : " border-secondary text-secondary shadow-secondary"
                     } flex-shrink-0 rounded border-[2px] p-[10px]`}
@@ -74,7 +76,9 @@ const Layout: NextPage<Props> = ({ children }) => {
                   </div>
                   <p
                     className={`${
-                      nav.to === path ? "text-primary" : "text-secondary"
+                      nav.to.split("/").pop() === path
+                        ? "text-primary"
+                        : "text-secondary"
                     } font-medium capitalize`}
                   >
                     {nav.title}
@@ -86,7 +90,10 @@ const Layout: NextPage<Props> = ({ children }) => {
         </div>
       </section>
 
-      <section className="col-span-7 w-full pt-32 px-12">{children}</section>
+      <section className="relative col-span-9 w-full px-5 py-24 lg:col-span-7 lg:px-12 lg:py-0 lg:pt-32">
+        {children}
+        <Watermark className="absolute -mx-5 lg:hidden" />
+      </section>
     </div>
   );
 };

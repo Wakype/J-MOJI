@@ -1,5 +1,10 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
 
 interface cardProps {
   emoji: string;
@@ -18,8 +23,6 @@ interface sectionProps {
   emojiWidth?: string;
   emojiSize?: string;
   titleSize?: string;
-  gridCols?: string;
-  isSlider?: boolean;
 }
 
 const EmoticonCard: React.FC<cardProps> = ({
@@ -34,7 +37,7 @@ const EmoticonCard: React.FC<cardProps> = ({
   titleSize,
 }) => (
   <div
-    className={`${containerClassName} w-full cursor-pointer overflow-hidden rounded-lg border-[2px] border-secondary shadow-[0px_7px_0px_#6c5f5b]`}
+    className={`${containerClassName} mx-auto w-[90%] cursor-pointer overflow-hidden rounded-lg border-[2px] border-secondary shadow-[0px_7px_0px_#6c5f5b]`}
   >
     <Link href={to} className="flex h-full w-full">
       <div
@@ -50,25 +53,38 @@ const EmoticonCard: React.FC<cardProps> = ({
   </div>
 );
 
-const EmoticonGrid: React.FC<sectionProps> = ({
+const MobileEmoticonGrid: React.FC<sectionProps> = ({
   className,
   data,
   emojiWidth = "w-[150px]",
   emojiSize = "text-base",
   titleSize = "text-xl",
-  gridCols = "grid-cols-3",
 }) => (
-  <div className={`${className} grid ${gridCols} w-full`}>
-    {data.map((emoticon, index) => (
-      <EmoticonCard
-        key={index}
-        emojiWidth={emojiWidth}
-        emojiSize={emojiSize}
-        titleSize={titleSize}
-        {...emoticon}
-      />
-    ))}
+  <div className={`${className} w-full`}>
+    <Swiper
+      className="w-full"
+      spaceBetween={20}
+      slidesPerView={1}
+      modules={[Autoplay]}
+      autoplay={{
+        pauseOnMouseEnter: false,
+        delay: 1500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+    >
+      {data.map((emoticon, index) => (
+        <SwiperSlide key={index} className="w-full py-5">
+          <EmoticonCard
+            emojiWidth={emojiWidth}
+            emojiSize={emojiSize}
+            titleSize={titleSize}
+            {...emoticon}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   </div>
 );
 
-export default EmoticonGrid;
+export default MobileEmoticonGrid;

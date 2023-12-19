@@ -2,12 +2,16 @@ import { FC } from "react";
 import { FaInstagram, FaGithub, FaTiktok } from "react-icons/fa6";
 import Link from "next/link";
 
-interface Props {}
+interface Props {
+  className?: string;
+}
 
-const Watermark: FC<Props> = ({}) => {
+const Watermark: FC<Props> = ({ className }) => {
   return (
-    <section className="absolute bottom-5 flex w-full items-end justify-between px-5">
-      <div className="flex flex-col rounded border-[2px] border-secondary px-3 py-2 shadow-secondary">
+    <section
+      className={`${className} absolute bottom-5 flex w-full justify-center lg:items-end lg:justify-between lg:px-5`}
+    >
+      <div className="hidden flex-col rounded border-[2px] border-secondary px-3 py-2 shadow-secondary lg:flex">
         {" "}
         <p className="font-mono text-[10px] font-semibold uppercase">
           j-moji 2023 -{" "}
@@ -25,7 +29,7 @@ const Watermark: FC<Props> = ({}) => {
         </p>
       </div>
 
-      <div className="flex items-end gap-x-3">
+      <div className="flex gap-x-3 lg:items-end">
         <Link href="https://www.instagram.com/im.waky/" target="_blank">
           <div className="hover-social rounded border-[2px] border-secondary p-[6px] shadow-secondary hover:border-primary hover:shadow-primary">
             <FaInstagram className="text-lg text-secondary" />
