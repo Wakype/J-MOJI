@@ -31,7 +31,7 @@ const TopNav = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 30) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -53,7 +53,7 @@ const TopNav = () => {
     >
       <Link href={"/"} className="hover-logo">
         <div className="rounded border-[2px] border-secondary px-3 py-2 shadow-secondary">
-          <h1 className="text-xs font-bold uppercase text-secondary lg:text-base">
+          <h1 className="select-none text-xs font-bold uppercase text-secondary lg:text-base">
             ╰(▔∀▔)╯ J-Moji
           </h1>
         </div>
@@ -94,7 +94,7 @@ const TopNav = () => {
           {/* <DrawerHeader>Create your account</DrawerHeader> */}
 
           <DrawerBody>
-            <div className="mt-16 flex w-full flex-col gap-y-10">
+            <div className="mt-16 flex w-full flex-col gap-y-10 overflow-y-scroll">
               <div className="flex w-full flex-col gap-y-4">
                 <div>
                   <h1 className="text-lg font-bold capitalize">

@@ -87,7 +87,7 @@ const OrnamentEmoji: FC<Props> = memo(({}) => {
           className={`${emoji.rotation} absolute ${emoji.position}`}
         >
           <p
-            className={`${emoji.className} font-sans ${emoji.size} animate__animated animate__fadeInUp font-bold text-primary`}
+            className={`${emoji.className} font-sans ${emoji.size} animate__animated select-none animate__fadeInUp font-bold text-primary`}
           >
             {emoji.text}
           </p>

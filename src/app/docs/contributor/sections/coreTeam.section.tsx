@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 interface Props {
@@ -24,10 +26,25 @@ const CoreTeam: FC<Props> = ({ data }) => {
         {data.contributor.coreTeam.map((user, i) => {
           return (
             <div key={i} className="flex items-start gap-x-3">
-              <div className="rounded border-[2px] border-secondary p-16 shadow-secondary"></div>
+              <div className="rounded border-[2px] border-secondary shadow-secondary">
+                <Image
+                  className=""
+                  objectFit="cover"
+                  objectPosition="center"
+                  width={130}
+                  height={0}
+                  quality={100}
+                  alt={user.name}
+                  src={user.imgUrl}
+                />
+              </div>
 
               <div className="flex flex-col">
-                <h1 className="text-xl font-bold capitalize">{user.name}</h1>
+                <Link href={user.githubUrl} target="_blank">
+                  <h1 className="text-lg font-bold capitalize hover:text-primary hover:underline lg:text-xl">
+                    {user.name}
+                  </h1>
+                </Link>
                 <p>{user.description}</p>
               </div>
             </div>

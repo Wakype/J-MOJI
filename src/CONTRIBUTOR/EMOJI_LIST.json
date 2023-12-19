@@ -1,4 +1,51 @@
 {
+  "contributor": {
+    "coreTeam": [
+      {
+        "name": "wakype",
+        "imgUrl": "https://avatars.githubusercontent.com/u/94674924?v=4",
+        "githubUrl": "https://github.com/Wakype",
+        "description": "J-MOJI Creator"
+      }
+    ],
+    "outsideContributor": [
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      },
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      },
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      },
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      },
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      },
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      },
+      {
+        "name": "become a contributor!",
+        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
+        "githubUrl": "https://github.com/Wakype/J-MOJI/pulls"
+      }
+    ]
+  },
   "emoji": [
     {
       "to": "/docs/emoji-list/joy",
@@ -314,42 +361,5 @@
         { "emoji": "▓▒░(°◡°)░▒▓" }
       ]
     }
-  ],
-  "contributor": {
-    "coreTeam": [
-      {
-        "name": "wakype",
-        "imgUrl": "https://avatars.githubusercontent.com/u/94674924?v=4",
-        "githubUrl": "https://github.com/Wakype",
-        "description": "J-MOJI Creator"
-      }
-    ],
-    "outsideContributor": [
-      {
-        "name": "become a contributor!",
-        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
-        "githubUrl": "https://github.com"
-      },
-      {
-        "name": "become a contributor!",
-        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
-        "githubUrl": "https://github.com"
-      },
-      {
-        "name": "become a contributor!",
-        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
-        "githubUrl": "https://github.com"
-      },
-      {
-        "name": "become a contributor!",
-        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
-        "githubUrl": "https://github.com"
-      },
-      {
-        "name": "become a contributor!",
-        "imgUrl": "https://avatars.githubusercontent.com/u/95275882?v=4",
-        "githubUrl": "https://github.com"
-      }
-    ]
-  }
+  ]
 }
